@@ -1,0 +1,88 @@
+﻿@model IEnumerable<BTL.Models.RuouXuatKhau>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="color: red">Rượu Xuất/Nhập  Kho</h2>
+
+<p>
+    @Html.ActionLink("Rượu Mới", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TenRuou)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NongDo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoLuong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DonVi_Chai)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DanhGia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TinhChat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NguonGoc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DonGia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NguoiXuat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NguoiNhap)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenRuou)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NongDo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoLuong)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DonVi_Chai)
+        </td>
+        <td>
+            @Html.Raw(item.DanhGia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TinhChat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NguonGoc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DonGia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NguoiXuat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NguoiNhap)
+        </td>
+        <td>
+            @Html.ActionLink("Sửa", "Edit", new { id=item.IDRuou }) |
+            @Html.ActionLink("Chi Tiết", "Details", new { id=item.IDRuou }) |
+            @Html.ActionLink("Xóa", "Delete", new { id=item.IDRuou })
+        </td>
+    </tr>
+}
+
+</table>

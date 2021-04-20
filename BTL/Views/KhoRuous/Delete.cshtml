@@ -1,0 +1,80 @@
+﻿@model BTL.Models.KhoRuou
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="color: red">Xóa Rượu</h2>
+
+
+<div>
+   
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenRuou)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenRuou)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NongDo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NongDo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoLuong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DonVi_Chai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DonVi_Chai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DanhGia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DanhGia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TinhChat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TinhChat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NguonGoc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NguonGoc)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa Luôn" class="btn btn-default" /> |
+            @Html.ActionLink("Xem Danh Sách", "Index")
+        </div>
+    }
+</div>
