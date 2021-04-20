@@ -11,6 +11,7 @@ namespace BTL.Models
     public class RuouXuatKhau : KhoRuou
     {
         [Key]
+
         public int DonGia { get; set; }
         public string NguoiXuat{ get; set; }
         public string NguoiNhap { get; set; }

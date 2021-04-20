@@ -159,6 +159,10 @@
     <Compile Include="Migrations\202104200136598_DanhGia.Designer.cs">
       <DependentUpon>202104200136598_DanhGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104200350467_XuatKhau.cs" />
+    <Compile Include="Migrations\202104200350467_XuatKhau.Designer.cs">
+      <DependentUpon>202104200350467_XuatKhau.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DanhGia.cs" />
     <Compile Include="Models\KhoDbContext.cs" />
@@ -601,6 +605,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104200136598_DanhGia.resx">
       <DependentUpon>202104200136598_DanhGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104200350467_XuatKhau.resx">
+      <DependentUpon>202104200350467_XuatKhau.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
